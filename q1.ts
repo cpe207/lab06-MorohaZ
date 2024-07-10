@@ -5,9 +5,9 @@ import axios from "axios";
 const getUser = async (userId: number)=> {
   try {
     const response = await axios.get(`https://jsonplaceholder.typicode.com/users/${userId}`);
-    return response.data;
+    return response.data.name;
   } catch (error) {
-    return "INVALID USER ID"
+    return "“INVALID USER ID"
   }
 };
 
